@@ -1,0 +1,48 @@
+.overlay1 {
+  background-color: #a56abd;
+  display: flex; /* Utilise Flexbox pour centrer */
+  justify-content: center; /* Centre horizontalement */
+  width: 100%; /* Prend toute la largeur de la fenêtre */
+  height: 100%;
+  align-items: center;
+  margin-top: 7%;
+  /*box-sizing: border-box; /* Inclut le padding dans les dimensions */
+}
+/* auth forms */
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.box1 {
+  background-color: #a56abd;
+  width: 70%; /* Ajustez la largeur de la boîte à votre convenance */
+  padding: 20px; /* Ajoute un espace interne à la boîte */
+  border-radius: 10px; /* Donne des coins arrondis */
+  display: grid; /* Utilise un système de grille */
+  grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
+  gap: 10px; /* Espace entre les colonnes */
+  align-items: center;
+  height: 100%;
+  margin-top: 40px;
+}
+.img1 {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  align-items: center;
+}
+form > button {
+  font-weight: bolder !important;
+  border-radius: 50px !important;
+  width: 80% !important;
+}
+.overlay1 > .form-control{
+  background-color: rgba(199, 199, 199, 0.3) !important;
+  color: white !important;
+}
+.overlay1 > input::placeholder {
+  color: white !important; /* Set placeholder color to white */
+}

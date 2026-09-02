@@ -1,0 +1,21 @@
+/* vars.css */
+:root {
+    /* Palette de couleurs */
+    --primary-color: #49225b;
+    --secondary-color: #6e3482;
+    --accent-color: #a56abd;
+    --background-light: #e7dbef;
+    --background-dark: #20002d;
+    --text-color: #f5eeee;
+  
+    /* Dégradé */
+    --background-gradient: linear-gradient(120deg, #1b0327, #582469, #bd5de3);
+  
+    /* Espacement */
+    --padding-section: 80px;
+  
+    /* Fonts */
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+  }
+  

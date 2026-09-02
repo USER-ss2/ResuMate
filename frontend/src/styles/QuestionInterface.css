@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+
+body {
+  background: linear-gradient(#5246ba, #8574e0, #e4d4ff);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.questionsContainer {
+  background-color: white;
+  margin-top: 10%;
+  padding: 80px 30px;
+  width: 80%; /* Adjusted width for better layout */
+  min-height: 500px; /* Ensures a minimum height */
+  min-width: 700px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 15px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Flex for centering content */
+  flex-direction: column; /* Stack child elements vertically */
+  justify-content: space-between; /* Center content vertically */
+  align-self: center;
+  margin-bottom: 10%;
+}
+.cursor {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  border-right: 2px solid rgba(7, 7, 7, 0.75);
+}
+.typewriter-animation {
+  animation: typewriter 5s steps(50) 1s 1 normal both,
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkingCursor {
+  from {
+    border-right-color: rgba(3, 3, 3, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.question {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.Next ,.btn {
+  background-color: #29008d;
+  color: white;
+  padding: 10px 20px;
+  border: none; /* No border by default */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: border 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+.Next:hover,.btn:hover {
+  color: #29008d;
+  border: 2px solid #3a12c0; /* Add white border on hover */
+  background-color: white; /* Optional: Slightly change background color on hover */
+}
+textarea {
+  min-height: 100px !important; /* Minimum height for about 5 lines */
+  resize: vertical; /* Allow resizing only vertically */
+  padding: 10px;
+  width: 100%; /* Make it responsive */
+  font-size: 16px; /* Ensure readability */
+  line-height: 1.5; /* Adjust spacing between lines */
+  font-family: "Trebuchet MS", sans-serif;
+}
+textarea::placeholder,
+.form-floating > label {
+  font-family: "Verdana", monospace; /* Example font */
+  font-size: 16px;
+}
+.question > strong {
+  font-size: larger;
+}
+
+.checkbox-question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 640px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+ul.ks-cboxtags {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+ul.ks-cboxtags li {
+  display: inline-flex;
+  align-items: center;
+}
+
+ul.ks-cboxtags li label {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(139, 139, 139, 0.3);
+  color: #adadad;
+  border-radius: 25px;
+  white-space: nowrap;
+  margin: 3px 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+ul.ks-cboxtags li label::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  content: "\f067";
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label::before,
+ul.ks-cboxtags li input[type="radio"]:checked + label::before {
+  content: "\f00c";
+  transform: rotate(-360deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label,
+ul.ks-cboxtags li input[type="radio"]:checked + label {
+  border: 2px solid #49225b;
+  background-color: #8d52a5;
+  color: #fff;
+}
+
+ul.ks-cboxtags li input[type="checkbox"],
+ul.ks-cboxtags li input[type="radio"]  {
+  position: absolute;
+  opacity: 0;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:focus + label,
+ul.ks-cboxtags li input[type="radio"]:focus + label  {
+  border: 2px solid #e9a1ff;
+}
+
+.selected-options-bar {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f4fc;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 1px solid #d6e0f0;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #29008d;
+  border-radius: 20px;
+  background-color: #927acf6c;
+  color: #29008d;
+  font-size: 14px;
+}
+
+.remove-option {
+  background: none;
+  border: none;
+  margin-left: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.remove-option:hover {
+  color: #ce5252;
+}
+
+.custom-select-container {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  margin: 10px 0;
+}
+.custom-select {
+  width: 100%;
+  padding: 10px 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid #d6e0f0;
+  border-radius: 25px;
+  background: #f9f9f9;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none; /* Remove default browser styles */
+  background-image: linear-gradient(45deg, transparent 50%, #29008d 50%),
+    linear-gradient(135deg, #29008d 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1.5em),
+    calc(100% - 15px) calc(1.5em);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.custom-select:hover {
+  border-color: #29008d;
+  background-color: #f0f4fc;
+}
+
+.custom-select:focus {
+  border-color: #ce5252;
+  outline: none;
+  box-shadow: 0 0 5px rgba(206, 82, 82, 0.5);
+}
+
+.custom-select option {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #555;
+  padding: 10px;
+}
+
+.form > form > div {
+  text-align: left;
+}
+
+.coursesContainer {
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  background: #e7dbef48;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.courseInputSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.courseInput {
+  flex-grow: 1;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: 2px solid #d6e0f0;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.courseInput:focus {
+  border-color: #49225b;
+  box-shadow: 0 0 5px #49225b7e;
+}
+
+.addButton {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background: #6e3482;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background: #49225b;
+}
+
+.coursesBar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+width: 100%;
+}
+
+.courseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 15px;
+  border: 2px solid #eaeaea;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.courseItem:hover {
+  border-color: #d28ff1;
+  background: #825a8f80
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: #ce5252;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.removeButton:hover {
+  color: #a30e0e;
+}
+
+.required {
+  color: rgb(165, 0, 0);
+}
+
+.submit{
+  margin-top: 20px;
+float: right;
+}
+

@@ -1,0 +1,65 @@
+/* Styles de votre footer */
+.footer {
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--background-dark);
+  /* Fixez une hauteur spécifique si nécessaire */
+  min-height:150px; /* Exemple de hauteur fixe, ajustez selon vos besoins */
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.socialIcon {
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  transform: translateY(-5px);
+  color: var(--accent-color);
+}
+
+.footerText {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footerText a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.footerText a:hover {
+  text-decoration: underline;
+}
+
+/* Gradient and effects */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: -1;
+}
